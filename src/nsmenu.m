@@ -464,9 +464,9 @@ ns_update_menubar (struct frame *f, bool deep_p, EmacsMenu *submenu)
    frame's menus have changed, and the *step representation should be updated
    from Lisp.  */
 void
-set_frame_menubar (struct frame *f, bool first_time, bool deep_p)
+set_frame_menubar (struct frame *f, bool first_time)
 {
-  ns_update_menubar (f, deep_p, nil);
+  ns_update_menubar (f, nil, nil);
 }
 
 void
