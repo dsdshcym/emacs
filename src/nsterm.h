@@ -619,6 +619,7 @@ typedef id instancetype;
   unsigned long xbm_fg;
 @public
   NSAffineTransform *transform;
+  BOOL smoothing;
 }
 + (instancetype)allocInitFromFile: (Lisp_Object)file;
 - (void)dealloc;
@@ -637,6 +638,8 @@ typedef id instancetype;
 - (Lisp_Object)getMetadata;
 - (BOOL)setFrame: (unsigned int) index;
 - (void)setTransform: (double[3][3]) m;
+- (void)setSmoothing: (BOOL)s;
+- (size_t)sizeInBytes;
 @end
 
 
